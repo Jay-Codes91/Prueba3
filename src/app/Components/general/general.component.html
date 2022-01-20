@@ -1,0 +1,13 @@
+<h1 class="text-center">{{titulo}}</h1>
+
+<input type="text" class="form-control w-25" [(ngModel)]="txt">
+
+<h1>{{txt}}</h1>
+<br>
+
+<h2 [innerText]="nombre"></h2>
+
+<ol class=" list-group w-25 mx-auto text-center list-group-numbered">
+   <li class="list-group-item" *ngFor="let fruta of frutas">{{fruta}}</li>
+</ol>
+
