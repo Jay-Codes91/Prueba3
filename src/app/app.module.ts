@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { GeneralComponent } from './Components/general/general.component';
 import { Prueba1Component } from './Components/prueba1/prueba1.component';
 import { Prueba2Component } from './Components/prueba2/prueba2.component';
+import {CalendarModule} from 'primeng/calendar';
+import {ListboxModule} from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { Prueba2Component } from './Components/prueba2/prueba2.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    CalendarModule,
+    ListboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

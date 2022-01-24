@@ -1,1 +1,13 @@
 <p>prueba2 works!</p>
+<br>
+
+<label for="time">Time / 24h</label>
+<p-calendar class="ms-2" [(ngModel)]="date" [showTime]="true" [showSeconds]="true" inputId="time" #cal></p-calendar>
+
+<br><br>
+
+<div class="w-25 mx-auto">
+  <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-listbox>  
+</div>
+
+

@@ -5,9 +5,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './prueba2.component.html',
   styleUrls: ['./prueba2.component.scss']
 })
+
 export class Prueba2Component implements OnInit {
 
-  constructor() { }
+  date: string = "";
+  cities: any=[] = [];
+
+  selectedCity: string = "";
+
+  constructor() { 
+    this.cities = [
+      {name: 'New York', code: 'NY'},
+      {name: 'Rome', code: 'RM'},
+      {name: 'London', code: 'LDN'},
+      {name: 'Istanbul', code: 'IST'},
+      {name: 'Paris', code: 'PRS'}
+  ];
+  }
 
   ngOnInit(): void {
   }
