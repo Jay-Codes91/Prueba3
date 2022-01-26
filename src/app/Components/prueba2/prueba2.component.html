@@ -1,13 +1,58 @@
-<p>prueba2 works!</p>
+<h1 class="text-center">Prueba de calendarios</h1>
 <br>
 
-<label for="time">Time / 24h</label>
-<p-calendar class="ms-2" [(ngModel)]="date" [showTime]="true" [showSeconds]="true" inputId="time" #cal></p-calendar>
+<div class="w-25 mx-auto border p-2">
+  <h2 class="text-center">Clásico</h2><br>
 
-<br><br>
+  <input type="date" class="form-control" [(ngModel)]="date">
+  <h3>Fecha: {{date}}</h3>
+  <br>
+  <input type="time" class="form-control" [(ngModel)]="time">
+  <h3>Fecha: {{time}}</h3>
+  <br>
+  <input type="datetime-local" id="" [(ngModel)]="fullTime">
+   <h3>Full: {{fullTime}}</h3>  
 
-<div class="w-25 mx-auto">
-  <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-listbox>  
 </div>
+<br>
+<div class="w-25 mx-auto border p-2">
+  <h2 class="text-center">PrimeNG</h2><br>
+  <p-calendar [(ngModel)]="date2" dataType="string" dateFormat="yy/mm/dd" [showIcon]="true" inputId="icon"></p-calendar>
+  <h3>Fecha: {{date2}}</h3><br>
+
+  <p-calendar [(ngModel)]="time2" [timeOnly]="true" dataType="string" [showIcon]="true" [hourFormat]="tipo" inputId="timeonly"></p-calendar>
+  <h3>Hora: {{time2}}</h3>
+
+  <p-calendar [(ngModel)]="fullTime2" [showTime]="true" [showSeconds]="true" dataType="string" inputId="time"></p-calendar>
+  <h3>Full: {{fullTime2}}</h3>
+</div>
+<br>
+
+<div class="w-25 mx-auto border p-2">
+  <h2 class="text-center">NGX TimePicker</h2><br>
+   
+  <input [ngxTimepicker]="picker" [format]="24" class="form-control" [(ngModel)]="times">
+  <ngx-material-timepicker #picker ></ngx-material-timepicker>
+  <h3>Hora: {{times}}</h3>
+
+</div>
+<br>
+
+<div class="w-25 mx-auto border p-2">
+  <h2 class="text-center">Combinado</h2><br>
+  
+  <p-calendar dataType="string" dateFormat="yy/mm/dd" [showIcon]="true" inputId="icon" [(ngModel)]="date" #fecha></p-calendar>
+  <br><br>
+  <input [ngxTimepicker]="picker" [format]="24" class="form-control"[(ngModel)]="times" #hora>
+  <ngx-material-timepicker #picker ></ngx-material-timepicker>
+  <br>
+  <div class="text-center">
+    <button class="btn btn-primary" type="button" (click)="obtenerFecha(date,times)" >Obtener</button>
+  </div>
+  <br>
+  <h3>FullTime</h3>
+  <input class="form-control" type="text" [(ngModel)]="fechaCompleta">
+</div>
+
 
 

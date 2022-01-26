@@ -9,21 +9,26 @@ import { Component, OnInit } from '@angular/core';
 export class Prueba2Component implements OnInit {
 
   date: string = "";
-  cities: any=[] = [];
+  time: string = "";
+  fullTime: string = "";
 
-  selectedCity: string = "";
+  date2: string = "";
+  time2: string = "";
+  fullTime2: string = "";
 
-  constructor() { 
-    this.cities = [
-      {name: 'New York', code: 'NY'},
-      {name: 'Rome', code: 'RM'},
-      {name: 'London', code: 'LDN'},
-      {name: 'Istanbul', code: 'IST'},
-      {name: 'Paris', code: 'PRS'}
-  ];
-  }
+ fechaCompleta = "";
+  
+  times:string = '';
+  
+  tipo:string = '12';
+  
+  constructor() {}
 
   ngOnInit(): void {
+  }
+
+  obtenerFecha(fecha: string, hora: string){
+    this.fechaCompleta = fecha + "T" + hora + ":00";
   }
 
 }
