@@ -1,3 +1,7 @@
+# Descripcion
+
+Pruebas con lazy loading en rutas, en imágenes y varios tipos de calendarios
+
 # Repaso
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
