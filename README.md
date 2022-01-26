@@ -1,6 +1,6 @@
 # Descripcion
 
-Pruebas con lazy loading en rutas y en imágenes y varios tipos de calendarios
+Pruebas con lazy loading en rutas, en imágenes y varios tipos de calendarios
 
 # Repaso
 
