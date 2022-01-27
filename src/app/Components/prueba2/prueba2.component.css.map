@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,AAAA,UAAU,CAAA;EACX,gBAAgB,EAAE,KAAK;CAC1B",
+    "sources": [
+        "prueba2.component.scss"
+    ],
+    "names": [],
+    "file": "prueba2.component.css"
+}

@@ -1,58 +1,64 @@
 <h1 class="text-center">Prueba de calendarios</h1>
 <br>
 
-<div class="w-25 mx-auto border p-2">
-  <h2 class="text-center">Clásico</h2><br>
+<div class="container-fluid">
+  <div class="row g-2">
+    <div class="col-12 col-lg-3 border p-2">
+      <h2 class="text-center">Clásico</h2><br>
 
-  <input type="date" class="form-control" [(ngModel)]="date">
-  <h3>Fecha: {{date}}</h3>
-  <br>
-  <input type="time" class="form-control" [(ngModel)]="time">
-  <h3>Fecha: {{time}}</h3>
-  <br>
-  <input type="datetime-local" id="" [(ngModel)]="fullTime">
-   <h3>Full: {{fullTime}}</h3>  
+      <input type="date" class="form-control" [(ngModel)]="date" readonly>
+      <h3>Fecha: {{date}}</h3>
+      <br>
+      <input type="time" class="form-control" [(ngModel)]="time" readonly>
+      <h3>Fecha: {{time}}</h3>
+      <br>
+      <input type="datetime-local" id="" [(ngModel)]="fullTime" readonly>
+      <h3>Full: {{fullTime}}</h3>
 
-</div>
-<br>
-<div class="w-25 mx-auto border p-2">
-  <h2 class="text-center">PrimeNG</h2><br>
-  <p-calendar [(ngModel)]="date2" dataType="string" dateFormat="yy/mm/dd" [showIcon]="true" inputId="icon"></p-calendar>
-  <h3>Fecha: {{date2}}</h3><br>
-
-  <p-calendar [(ngModel)]="time2" [timeOnly]="true" dataType="string" [showIcon]="true" [hourFormat]="tipo" inputId="timeonly"></p-calendar>
-  <h3>Hora: {{time2}}</h3>
-
-  <p-calendar [(ngModel)]="fullTime2" [showTime]="true" [showSeconds]="true" dataType="string" inputId="time"></p-calendar>
-  <h3>Full: {{fullTime2}}</h3>
-</div>
-<br>
-
-<div class="w-25 mx-auto border p-2">
-  <h2 class="text-center">NGX TimePicker</h2><br>
-   
-  <input [ngxTimepicker]="picker" [format]="24" class="form-control" [(ngModel)]="times">
-  <ngx-material-timepicker #picker ></ngx-material-timepicker>
-  <h3>Hora: {{times}}</h3>
-
-</div>
-<br>
-
-<div class="w-25 mx-auto border p-2">
-  <h2 class="text-center">Combinado</h2><br>
+    </div>
   
-  <p-calendar dataType="string" dateFormat="yy/mm/dd" [showIcon]="true" inputId="icon" [(ngModel)]="date" #fecha></p-calendar>
-  <br><br>
-  <input [ngxTimepicker]="picker" [format]="24" class="form-control"[(ngModel)]="times" #hora>
-  <ngx-material-timepicker #picker ></ngx-material-timepicker>
-  <br>
-  <div class="text-center">
-    <button class="btn btn-primary" type="button" (click)="obtenerFecha(date,times)" >Obtener</button>
+    <div class="col-12 col-lg-3 border p-2">
+      <h2 class="text-center">PrimeNG</h2><br>
+      <p-calendar [(ngModel)]="date2" dataType="string" dateFormat="yy/mm/dd" [readonlyInput]="true" [showIcon]="true" inputId="icon">
+      </p-calendar>
+      <h3>Fecha: {{date2}}</h3><br>
+
+      <p-calendar [(ngModel)]="time2" [timeOnly]="true" dataType="string" [readonlyInput]="true" [showIcon]="true" [hourFormat]="tipo"
+        inputId="timeonly"></p-calendar>
+      <h3>Hora: {{time2}}</h3>
+
+      <p-calendar [(ngModel)]="fullTime2" [showTime]="true" [showSeconds]="true" [readonlyInput]="true" dataType="string" inputId="time">
+      </p-calendar>
+      <h3>Full: {{fullTime2}}</h3>
+    </div>
+   
+
+    <div class="col-12 col-lg-3 border p-2">
+      <h2 class="text-center">NGX TimePicker</h2><br>
+
+      <input [ngxTimepicker]="picker" [format]="24" class="form-control" [(ngModel)]="times" readonly>
+      <ngx-material-timepicker #picker></ngx-material-timepicker>
+      <h3>Hora: {{times}}</h3>
+
+    </div>
+   
+
+    <div class="col-12 col-lg-3 border p-2">
+      <h2 class="text-center">Combinado</h2><br>
+
+      <p-calendar dataType="string" dateFormat="yy/mm/dd" [showIcon]="true" [readonlyInput]="true" inputId="icon" [(ngModel)]="date">
+      </p-calendar>
+      <br><br>
+      <input [ngxTimepicker]="picker" [format]="24" class="form-control form-control-lg" [(ngModel)]="times" readonly>
+      <ngx-material-timepicker #picker></ngx-material-timepicker>
+      <br>
+      <div class="text-center">
+        <button class="btn btn-primary" type="button" (click)="obtenerFecha(date,times)">Obtener</button>
+      </div>
+      <br>
+      <h3>FullTime</h3>
+      <input class="form-control" type="text" [(ngModel)]="fechaCompleta" readonly>
+    </div>
+    <br><br>
   </div>
-  <br>
-  <h3>FullTime</h3>
-  <input class="form-control" type="text" [(ngModel)]="fechaCompleta">
 </div>
-
-
-
