@@ -1,0 +1,149 @@
+<!--<ul class="list-group w-50 mx-auto">
+  <li *ngFor="let tema of temaColores, let i = index" class="list-group-item" [style.background-color]="tema.code">{{tema.nombre}}</li>
+</ul>-->
+
+<!--<select class="form-select w-25 mx-auto mt-2" formControlName="colores">
+  <option selected>Open this select menu</option>
+  <option *ngFor="let item of temaColores" [style.background-color]="item.code" value="one">{{item.nombre}}</option>
+</select>-->
+
+<div class="container p-2 d-flex justify-content-between bg-light">
+  <button type="button" class="btnGray">Ayuda</button>
+  <button type="button" class="btnPrimary" data-bs-toggle="offcanvas" data-bs-target="#Eventos"
+    aria-controls="offcanvasExample">Agregar evento</button>
+</div>
+
+<div class="offcanvas offcanvas-end w-50" tabindex="-1" id="Eventos" aria-labelledby="EventosLabel">
+  
+  <div class="offcanvas-body">
+    <!--header--> 
+    <div class="d-flex justify-content-between">
+      <h5 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Añadir actividad</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <hr>
+    
+    <form>
+      <!--titulo-->
+      <div class="mt-2">
+        <label for="titulo">Título del evento</label>
+        <input class="form-control form-control-lg" type="text" id="titulo">
+      </div>
+
+       <!--Dias-->
+       <div class="d-flex mt-2">
+        <label for="dias">Actividad de más de 1 día:</label>
+        <div class="d-flex ms-3">
+          <label>No</label>
+          <div class="form-check form-switch ms-2">
+            <input class="form-check-input" type="checkbox" id="dias"
+              (change)="cambiarDias=!cambiarDias">
+          </div>
+          <label>Si</label>
+        </div>
+      </div>
+
+      <!--AllDay-->
+      <div class="d-flex mt-2">
+        <label for="allDay">¿Evento de todo el día?</label>
+        <div class="d-flex ms-3">
+          <label>No</label>
+          <div class="form-check form-switch ms-2">
+            <input class="form-check-input" type="checkbox" id="allDay"
+              (change)="mostrarHora=!mostrarHora">
+          </div>
+          <label>Si</label>
+        </div>
+      </div>
+
+      <!--Fecha inicio-->
+      <div class="mt-2">
+        <label for="startDate">{{cambiarDias ? 'Fecha de inicio de la actividad': 'Fecha de la actividad'}}</label>
+        <br>
+        <p-calendar dataType="string" dateFormat="yy/mm/dd" [showIcon]="true" name="date"
+          [readonlyInput]="true" inputId="icon" [showButtonBar]="true" [(ngModel)]="date">
+        </p-calendar>
+      </div>
+
+      <!--Fecha fin-->
+      <div *ngIf="cambiarDias">
+        <div class="mt-2">
+          <label for="startDate">Fecha de fin</label>
+          <br>
+          <p-calendar dataType="string" dateFormat="yy/mm/dd" [showIcon]="true" name="date2"
+            [readonlyInput]="true" inputId="icon" [showButtonBar]="true" [(ngModel)]="date2">
+          </p-calendar>
+        </div>
+      </div>
+
+      <!--Hora Inicio y fin-->
+      <label class="mt-2" *ngIf="mostrarHora">Hora de la actividad</label><br>
+      <div class="row mt-2" *ngIf="mostrarHora">
+
+        <div class="col-1"><label for="startTime" class="mt-2">De</label></div>
+        <div class="col-5">
+          <input [ngxTimepicker]="picker" [format]="24" class="form-control form-control-lg" name="time"
+            data-bs-dismiss="offcanvas" id="startTime" [(ngModel)]="time" readonly>
+          <ngx-material-timepicker #picker [cancelBtnTmpl]="cancelBtn" [confirmBtnTmpl]="confirmBtn">
+          </ngx-material-timepicker>
+        </div>
+
+
+        <div class="col-1"><label for="startTime2" class="mt-2">Hasta</label></div>
+        <div class="col-5">
+          <input [ngxTimepicker]="picker2" [format]="24" class="form-control form-control-lg"
+            name="time2" data-bs-dismiss="offcanvas" id="startTime2" [(ngModel)]="time2" readonly>
+          <ngx-material-timepicker #picker2 [cancelBtnTmpl]="cancelBtn2" [confirmBtnTmpl]="confirmBtn2">
+          </ngx-material-timepicker>
+        </div>
+
+
+        <ng-template #cancelBtn>
+          <button class="btnGray me-2" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Cancelar</button>
+        </ng-template>
+        <ng-template #confirmBtn>
+          <button class="btnPrimary" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Confirm tmpl</button>
+        </ng-template>
+
+        <ng-template #cancelBtn2>
+          <button class=" btnGray me-2" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Cancelar</button>
+        </ng-template>
+        <ng-template #confirmBtn2>
+          <button class=" btnPrimary" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Confirm tmpl</button>
+        </ng-template>
+      </div>
+
+      <!--Descripcion-->
+      <div class="form-group mt-2">
+        <label for="descripcion">Descripcion *</label>
+        <textarea id="descripcion" class="form-control" rows="3"></textarea>
+      </div>
+
+      <!--Participantes-->
+      <div class="mt-2">
+        <label for="participantes">Participantes</label><br>
+        <p-chips [(ngModel)]="participantes" name="participantes" id="participantes">
+          <ng-template let-item pTemplate="item">
+            {{item}} &nbsp; <i class="pi pi-user ml-2"></i>
+        </ng-template>
+        </p-chips>
+      </div>
+
+      <!--Tema-->
+      <div class="mt-2">
+        <label for="backgroundColor">Seleccionar un tema</label>
+        <select class="form-select w-50 mt-2" id="backgroundColor">
+          <option selected>Seleccionar tema</option>
+          <option *ngFor="let item of temaColores" [style.background-color]="item.code" value="one">{{item.nombre}}</option>
+        </select>
+      </div>
+
+      <div class="d-flex mt-5 justify-content-end">
+        <button type="button" class="btnPrimary" disabled>Añadir Actividad</button>
+        <button type="button" class="btnGray ms-2" disabled>Cancelar</button>
+      </div>
+    </form>
+
+   </div>
+</div>
+

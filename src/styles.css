@@ -1,2 +1,158 @@
 /* You can add global styles to this file, and also import other style files */
+.btnPrimary {
+  padding: 7px 12px 7px 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-color: #81D4FA;
+}
+
+.btnPrimary:hover {
+  background-color: #4FC3F7;
+}
+
+.btnPrimary:focus {
+  color: #FBFCFC;
+}
+
+.btnPrimary:disabled {
+  color: black;
+  background-color: #4FC3F7;
+}
+
+.btnSecondary {
+  padding: 7px 12px 7px 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-color: #4DD0E1;
+}
+
+.btnSecondary:hover {
+  background-color: #26C6DA;
+}
+
+.btnSecondary:focus {
+  color: #FBFCFC;
+}
+
+.btnSecondary:disabled {
+  color: black;
+  background-color: #26C6DA;
+}
+
+.btnWarning {
+  padding: 7px 12px 7px 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-color: #FFCC80;
+}
+
+.btnWarning:hover {
+  background-color: #FFB74D;
+}
+
+.btnWarning:focus {
+  color: #FBFCFC;
+}
+
+.btnWarning:disabled {
+  color: black;
+  background-color: #FFB74D;
+}
+
+.btnDanger {
+  padding: 7px 12px 7px 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-color: #FF5252;
+  color: #FBFCFC;
+}
+
+.btnDanger:hover {
+  background-color: #D50000;
+}
+
+.btnDanger:focus {
+  color: #FBFCFC;
+}
+
+.btnDanger:disabled {
+  color: black;
+  background-color: #D50000;
+}
+
+.btnGray {
+  padding: 7px 12px 7px 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-color: #CFD8DC;
+}
+
+.btnGray:hover {
+  background-color: #B0BEC5;
+}
+
+.btnGray:focus {
+  color: #FBFCFC;
+}
+
+.btnGray:disabled {
+  color: black;
+  background-color: #B0BEC5;
+}
+
+.btnSuccess {
+  padding: 7px 12px 7px 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-color: #C5E1A5;
+}
+
+.btnSuccess:hover {
+  background-color: #AED581;
+}
+
+.btnSuccess:focus {
+  color: #FBFCFC;
+}
+
+.btnSuccess:disabled {
+  color: black;
+  background-color: #AED581;
+}
 /*# sourceMappingURL=styles.css.map */
