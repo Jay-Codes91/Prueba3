@@ -13,7 +13,7 @@
     aria-controls="offcanvasExample">Agregar evento</button>
 </div>
 
-<div class="offcanvas offcanvas-end w-50" tabindex="-1" id="Eventos" aria-labelledby="EventosLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="Eventos" aria-labelledby="EventosLabel">
   
   <div class="offcanvas-body">
     <!--header--> 
@@ -78,10 +78,10 @@
 
       <!--Hora Inicio y fin-->
       <label class="mt-2" *ngIf="mostrarHora">Hora de la actividad</label><br>
-      <div class="row mt-2" *ngIf="mostrarHora">
+      <div class="row mt-2 g-2" *ngIf="mostrarHora">
 
-        <div class="col-1"><label for="startTime" class="mt-2">De</label></div>
-        <div class="col-5">
+        <div class="col-6 col-lg-1"><label for="startTime" class="mt-2">De</label></div>
+        <div class="col-6 col-lg-5">
           <input [ngxTimepicker]="picker" [format]="24" class="form-control form-control-lg" name="time"
             data-bs-dismiss="offcanvas" id="startTime" [(ngModel)]="time" readonly>
           <ngx-material-timepicker #picker [cancelBtnTmpl]="cancelBtn" [confirmBtnTmpl]="confirmBtn">
@@ -89,8 +89,8 @@
         </div>
 
 
-        <div class="col-1"><label for="startTime2" class="mt-2">Hasta</label></div>
-        <div class="col-5">
+        <div class="col-6 col-lg-1"><label for="startTime2" class="mt-2">Hasta</label></div>
+        <div class="col-6 col-lg-5">
           <input [ngxTimepicker]="picker2" [format]="24" class="form-control form-control-lg"
             name="time2" data-bs-dismiss="offcanvas" id="startTime2" [(ngModel)]="time2" readonly>
           <ngx-material-timepicker #picker2 [cancelBtnTmpl]="cancelBtn2" [confirmBtnTmpl]="confirmBtn2">
@@ -140,7 +140,7 @@
 
       <div class="d-flex mt-5 justify-content-end">
         <button type="button" class="btnPrimary" disabled>Añadir Actividad</button>
-        <button type="button" class="btnGray ms-2" disabled>Cancelar</button>
+        <button type="button" class="btnGray ms-2" data-bs-toggle="offcanvas" data-bs-target="#Eventos" >Cancelar</button>
       </div>
     </form>
 

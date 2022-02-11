@@ -15,4 +15,32 @@
 #startTime2:read-only {
   background-color: white;
 }
+
+#Eventos {
+  width: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  #Eventos {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #Eventos {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hasta {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .hasta {
+    margin-top: 10px;
+  }
+}
 /*# sourceMappingURL=side-nav.component.css.map */
