@@ -65,6 +65,22 @@
         </p-calendar>
       </div>
 
+      <!--Hora inicio-->
+      <div class="mt-2" *ngIf="mostrarHora">
+        <label for="startTime">Hora de inicio</label>
+        <input [ngxTimepicker]="picker" [format]="24" class="form-control form-control-lg" name="time"
+            data-bs-dismiss="offcanvas" id="startTime" [(ngModel)]="time" readonly>
+          <ngx-material-timepicker #picker [cancelBtnTmpl]="cancelBtn" [confirmBtnTmpl]="confirmBtn">
+          </ngx-material-timepicker>
+
+          <ng-template #cancelBtn>
+            <button class="btnGray me-2" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Cancelar</button>
+          </ng-template>
+          <ng-template #confirmBtn>
+            <button class="btnPrimary" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Confirmar</button>
+          </ng-template>
+      </div>
+
       <!--Fecha fin-->
       <div *ngIf="cambiarDias">
         <div class="mt-2">
@@ -76,42 +92,23 @@
         </div>
       </div>
 
-      <!--Hora Inicio y fin-->
-      <label class="mt-2" *ngIf="mostrarHora">Hora de la actividad</label><br>
-      <div class="row mt-2 g-2" *ngIf="mostrarHora">
-
-        <div class="col-6 col-lg-1"><label for="startTime" class="mt-2">De</label></div>
-        <div class="col-6 col-lg-5">
-          <input [ngxTimepicker]="picker" [format]="24" class="form-control form-control-lg" name="time"
-            data-bs-dismiss="offcanvas" id="startTime" [(ngModel)]="time" readonly>
-          <ngx-material-timepicker #picker [cancelBtnTmpl]="cancelBtn" [confirmBtnTmpl]="confirmBtn">
-          </ngx-material-timepicker>
-        </div>
-
-
-        <div class="col-6 col-lg-1"><label for="startTime2" class="mt-2">Hasta</label></div>
-        <div class="col-6 col-lg-5">
-          <input [ngxTimepicker]="picker2" [format]="24" class="form-control form-control-lg"
-            name="time2" data-bs-dismiss="offcanvas" id="startTime2" [(ngModel)]="time2" readonly>
+      <!--Hora fin-->
+      <div class="mt-2" *ngIf="mostrarHora">
+        <label for="endTime">Hora fin</label>
+        <input [ngxTimepicker]="picker2" [format]="24" class="form-control form-control-lg"
+            name="time2" data-bs-dismiss="offcanvas" id="endTime" [(ngModel)]="time2" readonly>
           <ngx-material-timepicker #picker2 [cancelBtnTmpl]="cancelBtn2" [confirmBtnTmpl]="confirmBtn2">
           </ngx-material-timepicker>
-        </div>
-
-
-        <ng-template #cancelBtn>
-          <button class="btnGray me-2" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Cancelar</button>
-        </ng-template>
-        <ng-template #confirmBtn>
-          <button class="btnPrimary" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Confirm tmpl</button>
-        </ng-template>
-
-        <ng-template #cancelBtn2>
-          <button class=" btnGray me-2" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Cancelar</button>
-        </ng-template>
-        <ng-template #confirmBtn2>
-          <button class=" btnPrimary" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Confirm tmpl</button>
-        </ng-template>
+        
+          <ng-template #cancelBtn2>
+            <button class=" btnGray me-2" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Cancelar</button>
+          </ng-template>
+          <ng-template #confirmBtn2>
+            <button class=" btnPrimary" data-bs-toggle="offcanvas" data-bs-target="#Eventos">Confirmar</button>
+          </ng-template>
       </div>
+
+
 
       <!--Descripcion-->
       <div class="form-group mt-2">
@@ -131,10 +128,10 @@
 
       <!--Tema-->
       <div class="mt-2">
-        <label for="backgroundColor">Seleccionar un tema</label>
+        <label for="backgroundColor">Seleccionar un tema de fondo de la actividad</label>
         <select class="form-select w-50 mt-2" id="backgroundColor">
           <option selected>Seleccionar tema</option>
-          <option *ngFor="let item of temaColores" [style.background-color]="item.code" value="one">{{item.nombre}}</option>
+          <option *ngFor="let item of temaColores" [style.color]="item.code" value="one">{{item.nombre}}</option>
         </select>
       </div>
 

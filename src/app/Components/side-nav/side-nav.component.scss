@@ -1,12 +1,30 @@
 /*input:read-only{
     background-color: white;
 }*/
-#startTime:read-only{
-    background-color: white;
+#startTime{
+    width: 35%;
+    @media screen and (max-width: 480px){
+        width: 100%;
+     }
+     @media screen and (min-width: 481px) and (max-width: 768px){
+        width: 50%;
+     }
+    &:read-only{
+      background-color: white;  
+    }
 }
 
-#startTime2:read-only{
-    background-color: white;
+#endTime{
+    width: 35%;
+    @media screen and (max-width: 480px){
+        width: 100%;
+     }
+     @media screen and (min-width: 481px) and (max-width: 768px){
+        width: 50%;
+     }
+    &:read-only{
+        background-color: white;  
+    }
 }
 
 #Eventos{
