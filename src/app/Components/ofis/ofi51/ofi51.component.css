@@ -1,0 +1,56 @@
+.principal {
+  width: 75%;
+  margin: auto;
+}
+
+@media screen and (max-width: 540px) {
+  .principal {
+    width: 100%;
+  }
+}
+
+.parteA {
+  height: 100px;
+}
+
+.parteB {
+  height: 400px;
+}
+
+.parteB #parteB2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.parteB #parteB3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.parteC {
+  height: 300px;
+}
+
+.parteC #parteC2 {
+  height: 300px;
+}
+/*# sourceMappingURL=ofi51.component.css.map */

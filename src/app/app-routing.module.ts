@@ -18,8 +18,13 @@ const routes: Routes = [
   },
 
   {
+    path: 'oficinas',
+    loadChildren: () => import('./Components/oficinas/oficinas.module').then(m => m.OficinasModule)
+  },
+
+  {
     path: '',
-    loadChildren: () => import('./Components/side-nav/side-nav.module').then(m => m.SideNavModule),
+    loadChildren: () => import('./Components/oficinas/oficinas.module').then(m => m.OficinasModule),
     pathMatch: 'full'
   }
 ];

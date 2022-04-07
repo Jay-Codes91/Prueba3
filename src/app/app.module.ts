@@ -14,6 +14,10 @@ import {SidebarModule} from 'primeng/sidebar';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import {ChipsModule} from 'primeng/chips';
 import { SideNavComponent } from './Components/side-nav/side-nav.component';
+import { OficinasComponent } from './Components/oficinas/oficinas.component';
+import { OfisComponent } from './Components/ofis/ofis.component';
+import { Ofi51Component } from './Components/ofis/ofi51/ofi51.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import { SideNavComponent } from './Components/side-nav/side-nav.component';
     GeneralComponent,
     Prueba1Component,
     Prueba2Component,
-    SideNavComponent
+    SideNavComponent,
+    OficinasComponent,
+    OfisComponent,
+    Ofi51Component
   ],
   imports: [
     BrowserModule,

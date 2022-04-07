@@ -68,7 +68,7 @@
       <!--Hora inicio-->
       <div class="mt-2" *ngIf="mostrarHora">
         <label for="startTime">Hora de inicio</label>
-        <input [ngxTimepicker]="picker" [format]="24" class="form-control form-control-lg" name="time"
+        <input [ngxTimepicker]="picker" [format]="12" class="form-control form-control-lg" name="time"
             data-bs-dismiss="offcanvas" id="startTime" [(ngModel)]="time" readonly>
           <ngx-material-timepicker #picker [cancelBtnTmpl]="cancelBtn" [confirmBtnTmpl]="confirmBtn">
           </ngx-material-timepicker>

@@ -1,0 +1,36 @@
+.principal{
+    width: 75%;
+    margin: auto;
+    @media screen and (max-width: 540px){
+        width: 100%;
+        overflow-x: scroll;
+     }
+}
+
+.parteA{
+    height: 100px;
+}
+
+.parteB{
+    height: 400px;
+
+    #parteB2{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    #parteB3{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+}
+
+.parteC{
+    height: 300px;
+
+    #parteC2{
+        height: 300px;
+    }
+}
