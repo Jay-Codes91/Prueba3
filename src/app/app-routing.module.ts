@@ -23,6 +23,11 @@ const routes: Routes = [
   },
 
   {
+    path: 'prueba3',
+    loadChildren: () => import('./Components/prueba3/prueba3.module').then(m => m.Prueba3Module)
+  },
+
+  {
     path: '',
     loadChildren: () => import('./Components/oficinas/oficinas.module').then(m => m.OficinasModule),
     pathMatch: 'full'

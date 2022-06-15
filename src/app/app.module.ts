@@ -17,6 +17,8 @@ import { SideNavComponent } from './Components/side-nav/side-nav.component';
 import { OficinasComponent } from './Components/oficinas/oficinas.component';
 import { OfisComponent } from './Components/ofis/ofis.component';
 import { Ofi51Component } from './Components/ofis/ofi51/ofi51.component';
+import { Prueba3Component } from './Components/prueba3/prueba3.component';
+import { PasswordResetComponent } from './Components/password-reset/password-reset.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { Ofi51Component } from './Components/ofis/ofi51/ofi51.component';
     SideNavComponent,
     OficinasComponent,
     OfisComponent,
-    Ofi51Component
+    Ofi51Component,
+    Prueba3Component,
+    PasswordResetComponent
   ],
   imports: [
     BrowserModule,

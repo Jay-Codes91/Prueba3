@@ -13,6 +13,7 @@ export class Prueba2Component implements OnInit {
   fullTime: string = "";
 
   date2: string = "";
+  date10: string = "";
   time2: string = "";
   fullTime2: string = "";
 
@@ -22,7 +23,9 @@ export class Prueba2Component implements OnInit {
   
   tipo:string = '12';
   
-  constructor() {}
+  constructor() {
+    
+  }
 
   ngOnInit(): void {
   }
